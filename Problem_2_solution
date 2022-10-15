@@ -7,7 +7,7 @@ class Solution:
             while (x > 0):
                 value.append(int(x % 2))
                 x = int(x / 2)
-            for i in range(0, len(v)):
+            for i in range(0, len(value)):
                 if (value[i] == 1):
                     self.result.append(2**i)
                     
