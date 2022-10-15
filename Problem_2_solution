@@ -1,0 +1,29 @@
+class Solution:
+    def productQueries(self, n: int, queries: List[List[int]]) -> List[int]:
+        self.result = []
+        
+        def block(x):
+            value = []
+            while (x > 0):
+                value.append(int(x % 2))
+                x = int(x / 2)
+            for i in range(0, len(v)):
+                if (value[i] == 1):
+                    self.result.append(2**i)
+                    
+        mod = 10 ** 9 + 7
+        block(n)
+        self.final_result = []
+        for val in queries:
+            left = val[0]
+            right = val[1]
+            cur_val = 1
+            for i in range(left, right + 1):
+                cur_val = (cur_val * self.result[i]) % mod
+            
+            
+            
+            self.final_result.append(cur_val)
+        return self.final_result
+        
+        
